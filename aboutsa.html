@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style>
+
+    html{
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    .navbar{
+      font-size: 22px;
+      font-family: Bradley Hand, cursive;
+      position: fixed;
+      left: 0%;
+      width: 100%;
+      background-color: #b3e6ff;
+      z-index: 1;
+    }
+
+    .navbar-brand{
+      font-size: 32px;
+      font color: #00ace6;
+      font-family: Bradley Hand, cursive;
+    }
+
+    .nav-link{
+      font color: #333;  
+    }
+
+    .btn-outline-primary{
+      background-color: blue;
+    }
+
+    div.About{
+      font-size: 68px;
+      position: relative;
+      left: 30%;
+      top: -400px;
+      z-index: 1;
+    }
+    div.about2{
+      font-size: 68px;
+      position: relative;
+      left: 46.5%;
+      top: -440px;
+      z-index: 1;
+    }
+
+    hr.new1{
+      border-top: solid 1px black;
+      position: relative;
+      left: -24%;
+      top: -110px;
+      width: 12%;
+      color: #000000;
+    }
+
+    div.bigf{
+      position: relative;
+      left: 45%;
+      top: -180px;
+      font size: 42px;
+      font color: #00ace6;
+      font-family: Bradley Hand, cursive;
+    }
+
+    div.place-content{
+      font size: 30px;
+      font color: #00ace6;
+      font-family: Bradley Hand, cursive;
+      position: relative;
+      left: 25%;
+      top: -80px;
+    }
+
+</style>
+
+
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="{{ url_for('index') }}">Sent-x</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('getValue') }}">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('sett') }}">Settings</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('stat') }}">Statistics</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Blog</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('aboutt') }}">About</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ url_for('contacts') }}">Contact us
+        </a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><font style="color: white;">
+      Search</font></button>
+    </form>
+  </div>
+</nav>
+<br><br><br>
+<img style="width: 100%; height: 600px; z-index:-1" src="static/bg.jpg">
+<div class="About">
+<font color="white"><B>Sentiment<font style="position: relative; top: 8px " color="#cc00cc">+</font></B></font>
+</div>
+
+<div class="about2">
+  <B>
+  <font style="position: relative; top: -8px" color="#ff4d4d">-</font><font color="white">Analysis</font>
+  </B>
+</div>
+
+<hr class="new1">
+<B><font size="14px" style="position: relative; left: 20%; top: -130px; font-family: Bradley Hand, cursive;"> About us.</B>
+</font>
+<font style="size: 38px;">
+
+<div class="place-content">
+
+</body>
+
+</html>

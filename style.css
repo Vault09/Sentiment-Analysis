@@ -1,0 +1,73 @@
+<style>
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.vertical-menu {
+  height: 100%;
+  width: 280px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+.vertical-menu a {
+  background-color: #333;
+  color: white;
+  font-size: 23px;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul {
+  text-align: right;
+  vertical-align: top;
+  list-style-type: none;
+  margin-top: -10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  font-size: 23px;
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 13px 16px;
+  text-decoration: none;
+}
+
+li a.selectedclass {
+  color: #4CAF50;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+</style>

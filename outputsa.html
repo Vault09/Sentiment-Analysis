@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+p {
+	font-size: 54px;
+}
+
+.vertical-menu {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+.vertical-menu a {
+  background-color: #333;
+  color: white;
+  font-size: 23px;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul {
+  text-align: right;
+  vertical-align: top;
+  list-style-type: none;
+  margin-top: -10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  font-size: 23px;
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 13px 16px;
+  text-decoration: none;
+}
+
+li a.selectedclass {
+	color: #4CAF50;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+div.imgp {
+	position: relative;
+	left: 50%;
+	top: 150px;
+	border-style: none;
+	border: none;
+}
+
+div.bstyle {
+	display: block;
+	color: #4CAF50;
+	padding: 8px;
+	font-size: 20px;
+}
+
+</style>
+</head>
+
+<body> 
+<ul>
+  <li><a class="active" href="{{ url_for('index') }}">Home</a></li>
+  <li><a href="#news">News</a></li>
+   <li><a href="{{ url_for('stat') }}">Statistics</a></li>
+  <li><a href="{{ url_for('sett') }}">Settings</a></li>
+  <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+  <li><a href="{{ url_for('aboutt') }}">About</a></li>
+</ul>
+
+<p>
+<font color="#4CAF50">
+<h1>
+<font style="position: relative; left: 0%" size="54px"><center><B>
+Sentiment Analysis Tool</B></center>
+</font>
+</h1>
+</font>
+</p>
+
+
+<body>
+
+<font style="position: relative; left: 25%; font-family:courier; " size="20" color="#333"><h5>
+<B><br>The sentiment of the review is: <u> {{ s1 }} </u>.
+</B>
+
+</h5>
+
+</font>
+
+
+<center><B><br><br>
+</B></center>
+
+<script type="text/javascript">
+
+  	function picture(){ 
+    var pic = "img1.png"
+    document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+    document.getElementById('bigpic').style.display='block';
+
+    }
+
+</script>
+
+
+</body>
+</html>

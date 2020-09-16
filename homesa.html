@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Sentiment Analysis Tool</title>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+.vertical-menu {
+  height: 100%;
+  width: 280px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+.vertical-menu a {
+  background-color: #333;
+  color: white;
+  font-size: 23px;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul {
+  text-align: right;
+  vertical-align: top;
+  list-style-type: none;
+  margin-top: -10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  font-size: 23px;
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 13px 26px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+textarea {
+	display: block;
+	border: 1px solid #ba68c8;
+	width: 50%;
+	height: 35%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+div.static1 {
+	position: static;
+	margin-top: 150px;
+	margin-left: 580px;
+ 	border: 0;
+}
+
+div.static2 {
+	position: static;
+ 	margin-top: -250px;
+ 	margin-left: 960px;
+  	border: 0;
+}
+
+div.static3 {
+	position: static;
+  	margin-top: -250px;
+  	margin-left: 1330px;
+  	border: 0;
+}
+
+</style>
+</head>
+
+
+<body>
+<ul>
+  <li><a href="https://brand24.com/blog/">Blog</a></li>
+  <li><a href="#instagram">
+<img border="0" src="/static/insta.png" width="28" height="28">
+</a></li>
+  <li><a href="#facebook"><img border="0" src="/static/fb.png" width="28" height="28">
+</a></li>
+  <li><a href="#twitter"><img border="0" src="/static/twitter.png" width="28" height="28">
+</a></li>
+</ul>
+<font color="#4CAF50">
+<h1><font style="position: relative; left: 100px; top: 20px" size="50"><center><B>
+Sentiment Analysis Tool</B></center>
+</font>
+</h1>
+</font>
+
+
+<div class="vertical-menu">
+  <a class="active" href="home.html">Home</a>
+  <a href="{{ url_for('stat') }}">Statistics</a>
+  <a href="{{ url_for('sett') }}">Settings</a>
+  <a href="{{ url_for('aboutt') }}">About</a>
+  <a href="{{ url_for('contacts') }}">Contact us</a>
+</div>
+<center>
+	<br><br>
+<form name="passdata"  action={{ url_for('getValue') }} method="post">
+
+  <input type="radio" name="product1" value="product1">
+  <label for= "product1">Product 1</label>
+  <input type="radio" name="product2" value="product2">
+  <label for="product2">Product 2</label>
+  <input type="radio" name="product3" value="product3">
+  <label for="product3">Product 3</label>
+
+
+  <textarea name="message" placeholder="Enter text here..." style="position: relative; left: 100px; top: 70px" rows="7" cols="80"></textarea>
+  <br><br>
+
+
+</center>
+  <input style="position: relative; left: 1403px; top: 70px;" type="submit">
+</form>
+<br>
+<br><br>
+
+<div class="static1">
+<img src="/static/i1.png" width="300" height="250">
+</div>
+
+<div class="static2">
+<img src="/static/img2.png" width="300" height="250">
+</div>
+
+<div class="static3">
+<img src="/static/img3.png" width="300" height="250">
+</div>
+
+</body>
+</html>

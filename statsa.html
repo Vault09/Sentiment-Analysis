@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+.vertical-menu {
+  height: 100%;
+  width: 280px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+.vertical-menu a {
+  background-color: #333;
+  color: white;
+  font-size: 23px;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul {
+  text-align: right;
+  vertical-align: top;
+  list-style-type: none;
+  margin-top: -10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  overflow: hidden;
+  width: 98.5%;
+  background-color: #333;
+}
+
+li {
+  font-size: 23px;
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 13px 16px;
+  text-decoration: none;
+}
+
+li a.selectedclass {
+	color: #4CAF50;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+div.button1{
+	position: fixed;
+	left: 38%;
+	top: 65%;
+	}
+div.button2{
+	position: fixed;
+	left: 53%;
+	top: 65%;
+	}
+div.button3{
+	position: fixed;
+	left: 68%;
+	top: 65%;
+	}
+
+</style>
+</head>
+
+<body>
+	
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<div class="vertical-menu">
+  <a href="{{ url_for('getValue') }}">Home</a>
+  <a class="active" href="{{ url_for('stat') }}">Statistics</a>
+  <a href="{{ url_for('sett') }}">Settings</a>
+  <a href="{{ url_for('aboutt') }}">About</a>
+  <a href="{{ url_for('contacts') }}">Contact us</a>
+</div>
+<font color="#4CAF50">
+<h1><font style="position: relative; left: 5%; top: 15%" size="50"><center><B>
+Statistics</B></center>
+</font></h1>
+</font>
+<br>
+<center>
+	<font style="position: relative; left: 5%; top: 15%">
+    <h3>   <u> Sentiment distribution of the recent review</h3></u>
+    </font>
+    <img style="position: relative; left: 6%; top: 30%; border: solid; border-color: rgba(0, 0, 0, 56);" src="{{ url_for('static', filename=img1) }}">
+
+    <br>
+
+    <font style="position: fixed; left: 44%; top: 60%">
+    <u> <b>Combined Sentiment Distribution of all the reviews in a database</b></u></h3><br>
+    </font>
+</B></center>
+
+<script type="text/javascript">
+
+  	function picture(){ 
+    var pic = "img1.png"
+    document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+    document.getElementById('bigpic').style.display='block';
+
+    }
+			function showHideDiv(ele) {
+				var srcElement = document.getElementById(ele);
+				if (srcElement != null) {
+					if (srcElement.style.display == "block") {
+						srcElement.style.display = 'none';
+					}
+					else {
+						srcElement.style.display = 'block';
+					}
+					return false;
+				}
+			}
+
+</script>
+
+<br>
+<br>
+<center><B><br>
+	<center>
+		<div class="button1">
+		<input type="button" value="product1" onClick="showHideDiv('divMsg1')"/><br><br>
+		<div id="divMsg1" style="background-color: #006969; color: #ffffff; height: 200px; width: 200px; display:none">
+			<img src="{{ url_for('static', filename=mtor1) }}">
+		</div>
+	</div>
+	</center>
+
+	<center>
+		<div class="button2">
+		<input type="button" value="product2" onClick="showHideDiv('divMsg2')"/><br><br>
+		<div id="divMsg2" style="background-color: #006969; color: #ffffff; height: 200px; width: 200px; display:none">
+			<img src="{{ url_for('static', filename=mtor2) }}">
+		</div>
+	</div>
+	</center>
+
+	<center>
+		<div class="button3">
+		<input type="button" value="product3" onClick="showHideDiv('divMsg3')"/><br><br>
+		<div id="divMsg3" style="background-color: #006969; color: #ffffff; height: 200px; width: 200px; display:none">
+			<img src="{{ url_for('static', filename=mtor3) }}">
+		</div>
+		</div>
+	</center>
+
+</body>
+
+</html>
